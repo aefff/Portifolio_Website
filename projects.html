@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Welcome to my projects!</title>
+	<link rel='stylesheet' type='text/css' href='projects.css'>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Rubik:wght@500&display=swap" rel="stylesheet">
+	<link rel='icon' href='Images/icon.ico'>
+</head>
+<body>
+	<div class='navbar'>
+		<ul>
+			<li>
+				<input type="searchbar" placeholder='Looking for something?' class='searchbar'>
+			</li>
+			<li>
+				<div class="wrapper">
+					<div class="link_wrapper">
+						<a href="index.html" class='holder'>Back to landing!</a>
+						<div class="icon">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+								<path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 			0-4.882 4.882-4.882 12.796 0 17.678l58.66 	58.66H12.5c-6.903 0-12.5 			5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 			58.662c-4.88 	4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 			3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 	4.883-12.796 			0-17.678z"/>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<br>
+	<br>
+	<br>
+	<h1>Welcome to my projects</h1>
+	<div class='proj-display'>
+		<a href='Project/proj1.html'><div class='zone blue'>AI BuildIt</div></a>
+		<a href='Project/proj2.html'><div class='zone inBuild'>In Progress<img src="Images/wrench.jpeg" class='wrench'></div></a>
+		<a href='Project/proj3.html'><div class='zone inBuild'>Under Construction<img src="Images/wrench.jpeg" class='wrench'></div></a>
+		<a href='Project/proj4.html'><div class='zone inBuild'>On the Drawing Board<img src="Images/wrench.jpeg" class='wrench'></div></a>
+	</div>
+	<div class='img-select'>
+		<div class="wrap">
+			<input class='in' type="radio" id="rad1" name="rads" value="1" onclick="handleClick()">
+			<label for="rad1"></label>
+			<input class='in' type="radio" id="rad2" name="rads" value="2" onclick="handleClick()">
+			<label for="rad2"></label>
+			<input class='in' type="radio" id="rad3" name="rads" value="3" onclick="handleClick()">
+			<label for="rad3"></label>
+		</div>
+	</div>
+	<script type="text/javascript" src='script.js'></script>
+</body>
+</html>
