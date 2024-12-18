@@ -142,7 +142,7 @@ a:hover + .icon{
   top: 10%;
 	border: none;
 	font-size: 17px;
-	border: transparent bisque;
+	border-color: transparent bisque;
 	border-radius: 3px;
   transition: all 1s;
   font-size:1.5em;
@@ -154,7 +154,7 @@ a:hover + .icon{
 
 .img-select {
   position: sticky;
-  top: 5; /* adjust as needed */
+  top: 5px; /* adjust as needed */
   height: 50px;
 }
 

@@ -142,7 +142,7 @@ ul {
 	margin-bottom: 20px;
 	border: none;
 	font-size: 17px;
-	border: transparent bisque;
+	border-color: transparent bisque;
 	border-radius: 3px;
 }
 
@@ -176,7 +176,7 @@ ul {
 
 a {
   text-decoration: none;
-  margin: none;
+  margin: 0;
 }
 
 .zone:hover {
@@ -197,7 +197,7 @@ a {
   width: 15vw;
   height: 15vw;
   margin: 0 auto;
-  padding: 05vw
+  padding: 05vw;
   border: none;
   display: flex;
   justify-content: center;
