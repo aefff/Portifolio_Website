@@ -1,6 +1,6 @@
 var thisDocument = document.title
 
-if (document.title == 'Landing in process') {
+if (document.title === 'Landing in process') {
 	var landingText = document.getElementById('landing');
 	
 	function addExtra(htmlComp=landingText, extra='.') {
@@ -37,36 +37,26 @@ if (localStorage.getItem('backgroundValue')) {
 }
 
 function setBackground(value) {
-  if (value === '1') {
-    document.body.style.backgroundColor = '#FFB347';
-    document.body.style.backgroundImage = "url('Images/AUS.jpeg')";
     document.body.style.backgroundPosition = 'center';
     document.body.style.backgroundRepeat = 'no-repeat';
     document.body.style.backgroundSize = 'cover';
     document.body.style.backgroundAttachment = 'fixed';
     var elements = document.getElementsByClassName('cont');
+    if (value === '1') {
+    document.body.style.backgroundColor = '#FFB347';
+    document.body.style.backgroundImage = "url('Images/AUS.jpeg')";
     for(var i = 0; i < elements.length; i++) {
     	elements[i].style.backgroundColor = 'rgba(255, 94, 83, 0.5)';
     }
   } else if (value === '2') {
     document.body.style.backgroundColor = '#F7BE6D';
     document.body.style.backgroundImage = "url('Images/ARB.jpeg')";
-    document.body.style.backgroundPosition = 'center';
-    document.body.style.backgroundRepeat = 'no-repeat';
-    document.body.style.backgroundSize = 'cover';
-    document.body.style.backgroundAttachment = 'fixed';
-    var elements = document.getElementsByClassName('cont');
     for(var i = 0; i < elements.length; i++) {
     	elements[i].style.backgroundColor = 'rgba(244, 164, 96, 0.5)';
     }
   } else if (value === '3') {
     document.body.style.backgroundColor = '#00c04b';
     document.body.style.backgroundImage = "url('Images/JUN.jpeg')";
-    document.body.style.backgroundPosition = 'center';
-    document.body.style.backgroundRepeat = 'no-repeat';
-    document.body.style.backgroundSize = 'cover';
-    document.body.style.backgroundAttachment = 'fixed';
-    var elements = document.getElementsByClassName('cont');
     for(var i = 0; i < elements.length; i++) {
     	elements[i].style.backgroundColor = 'rgba(189, 189, 189, 0.5)';
     }
@@ -82,7 +72,7 @@ function handleClick() {
 }
 
 function checkTitleChange() {
-  if (thisDocument != document.title) {
+  if (thisDocument !== document.title) {
     handleClick();
   }
 }
@@ -109,4 +99,4 @@ function reveal() {
 window.addEventListener('scroll', reveal);
 reveal();
 
-window.onload() = checkTitleChange()
+window.onload = checkTitleChange()
