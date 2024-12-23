@@ -99,4 +99,4 @@ function reveal() {
 window.addEventListener('scroll', reveal);
 reveal();
 
-window.onload = checkTitleChange()
+checkTitleChange();
