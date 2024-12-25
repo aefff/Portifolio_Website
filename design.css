@@ -235,7 +235,6 @@ label {
   display: flex;
   flex-direction: column; /* Stack iceberg parts vertically */
   align-items: center; /* Center align the parts */
-  gap: 15px; /* Increase spacing between parts */
   width: 100%; /* Ensure it spans the container */
 }
 
