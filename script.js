@@ -45,18 +45,24 @@ function setBackground(value) {
     if (value === '1') {
     document.body.style.backgroundColor = '#FFB347';
     document.body.style.backgroundImage = "url('Images/AUS.jpeg')";
+	const radioButton = document.getElementById('rad1');
+	radioButton.checked = true;
     for(var i = 0; i < elements.length; i++) {
     	elements[i].style.backgroundColor = 'rgba(255, 94, 83, 0.5)';
     }
   } else if (value === '2') {
     document.body.style.backgroundColor = '#F7BE6D';
     document.body.style.backgroundImage = "url('Images/ARB.jpeg')";
+	const radioButton = document.getElementById('rad2');
+	radioButton.checked = true;
     for(var i = 0; i < elements.length; i++) {
     	elements[i].style.backgroundColor = 'rgba(244, 164, 96, 0.5)';
     }
   } else if (value === '3') {
     document.body.style.backgroundColor = '#00c04b';
     document.body.style.backgroundImage = "url('Images/JUN.jpeg')";
+	const radioButton = document.getElementById('rad3');
+	radioButton.checked = true;
     for(var i = 0; i < elements.length; i++) {
     	elements[i].style.backgroundColor = 'rgba(189, 189, 189, 0.5)';
     }
