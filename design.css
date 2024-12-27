@@ -255,20 +255,18 @@ label {
   width: 5%; /* Scales with the container */
   height: auto;
   position: absolute;
-  top: 80%;
-  left: 60%;
   transform: translate(-50%, -50%);
   transition: all 0.5s ease; /* Reduced hover transition time */
 }
 
 .pylogo {
-  width: 5%; /* Scales with the container */
-  height: auto;
-  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.5s ease; /* Reduced hover transition time */
+}
+
+.javalogo {
+  top: 80%;
+  left: 60%;
 }
 
 .iceTop {
@@ -285,6 +283,10 @@ label {
   transform: translateX(150px); /* Adjusted hover movement for balance */
 }
 
+.iceTop:hover .javalogo {
+  transform: translateX(-150px) translateY(-50px);
+}
+
 .iceTop:after {
   content: ''; /* Ensure no content by default */
   position: absolute;
@@ -297,9 +299,22 @@ label {
   display: inline-block;
 }
 
-.iceTop:hover:after {
-  content: 'Python was the first language I have ever learnt';
-  opacity: 1;
+
+.pylogo::after {
+  content: '';
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
   font-size: 0.9em; /* Adjust text size */
-  color: #444; /* Ensure readable text */
+  color: #444; /* Text color */
+  text-align: center;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.iceTop:hover .pylogo::after {
+  content: 'Python was the first language I have ever learnt'; /* Text to display */
+  opacity: 1;
+  transform: translateX(-50%) translateY(10px); /* Slight movement for better positioning */
 }
