@@ -252,7 +252,17 @@ label {
 }
 
 .logo {
-  width: 10%; /* Scales with the container */
+  width: 5%; /* Scales with the container */
+  height: auto;
+  position: absolute;
+  top: 80%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease; /* Reduced hover transition time */
+}
+
+.pylogo {
+  width: 5%; /* Scales with the container */
   height: auto;
   position: absolute;
   top: 50%;
@@ -271,8 +281,8 @@ label {
   gap: 5px; /* Reduce gap between logo and iceberg */
 }
 
-.iceTop:hover .logo {
-  transform: translateX(50px); /* Adjusted hover movement for balance */
+.iceTop:hover .pylogo {
+  transform: translateX(150px); /* Adjusted hover movement for balance */
 }
 
 .iceTop:after {
