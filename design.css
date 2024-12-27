@@ -8,19 +8,18 @@ html, body{
 }
 
 .zone {
-	cursor: pointer;
-	color: #000000;
-	background-color: #FFF;
-	border-radius: 4px;
-	border: 1px solid #bbb;
+  cursor: pointer;
+  color: #000000;
+  background-color: #FFF;
+  border-radius: 4px;
+  border: 1px solid #bbb;
 }
 
-
 h1 {
-	text-align: center;
-	direction: ltr;
-	text-transform: uppercase;
-	font-family: 'Rubik', sans-serif;
+  text-align: center;
+  direction: ltr;
+  text-transform: uppercase;
+  font-family: 'Rubik', sans-serif;
 }
 
 #landing {
@@ -29,20 +28,20 @@ h1 {
 }
 
 .Obackground {
-	display: inline-block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 50%;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 .leftside {
-	display: inline-block;
-	margin-right: auto;
-	margin-left: auto;
-	position: sticky;
-	left: 0;
-	top: 0;
-	animation: moveUpDown 2s ease-in-out infinite;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+  position: sticky;
+  left: 0;
+  top: 0;
+  animation: moveUpDown 2s ease-in-out infinite;
 }
 
 @keyframes moveUpDown {
@@ -64,9 +63,9 @@ ul {
 }
 
 .navbar {
-	position: sticky;
-	top: 10%;
-	font-family: 'Rubik';
+  position: sticky;
+  top: 10%;
+  font-family: 'Rubik';
 }
 
 /*Button anim*/
@@ -137,19 +136,19 @@ a:hover + .icon{
 /*Search bar*/
 
 .searchbar {
-	margin-left: 50px;
-	margin-bottom: 20px;
+  margin-left: 50px;
+  margin-bottom: 20px;
   top: 10%;
-	border: none;
-	font-size: 17px;
-	border-color: transparent bisque;
-	border-radius: 3px;
+  border: none;
+  font-size: 17px;
+  border-color: transparent bisque;
+  border-radius: 3px;
   transition: all 1s;
   font-size:1.5em;
 }
 
 .searchbar:hover {
-	background-color: skyblue;
+  background-color: skyblue;
 }
 
 .img-select {
@@ -185,7 +184,7 @@ label {
   border-radius: 50%;
   z-index: 2;
   transition: box-shadow .4s ease,
-          background .3s ease;
+  background .3s ease;
 }
 
 .img-select .in:checked + label:before {
@@ -243,7 +242,7 @@ label {
   width: 90%; /* Make responsive to the container */
   max-width: 25em; /* Prevent excessive scaling on larger screens */
   height: auto; /* Maintain aspect ratio */
-  box-sizing: border-box;
+  box-sizing: border-box
 }
 
 .ice:hover {
@@ -260,8 +259,9 @@ label {
 }
 
 .pylogo {
-  top: 50%;
-  left: 50%;
+  left: -50%;
+  position: relative;
+  display: inline-block;
 }
 
 .javalogo {
@@ -299,22 +299,26 @@ label {
   display: inline-block;
 }
 
-
 .pylogo::after {
-  content: '';
-  top: 100%;
+  content: 'Python was the first language I have ever learnt';
+  position: absolute;
+  top: 110%; /* Slightly below the element */
   left: 50%;
   transform: translateX(-50%);
-  opacity: 0;
+  opacity: 0; /* Hidden by default */
+  white-space: nowrap;
   transition: opacity 0.5s ease, transform 0.5s ease;
-  font-size: 0.9em; /* Adjust text size */
-  color: #444; /* Text color */
-  text-align: center;
-  white-space: nowrap; /* Prevent text wrapping */
+  background: #fff; /* For visibility */
+  color: #444;
+  font-size: 0.9em;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  z-index: 9999; /* Raise above the iceberg image */
 }
 
-.iceTop:hover .pylogo::after {
-  content: 'Python was the first language I have ever learnt'; /* Text to display */
-  opacity: 1;
-  transform: translateX(-50%) translateY(10px); /* Slight movement for better positioning */
+.iceTop:hover .pylogo::after,
+.pylogo:hover::after {
+  opacity: 1; /* Make it visible */
+  transform: translateX(-50%) translateY(0); /* Possibly shift a bit */
 }
