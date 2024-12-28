@@ -3,68 +3,88 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel='icon' href="Images/icon.ico">
-	<link rel="stylesheet" type="text/css" href="design.css">
+	<link rel="icon" href="Images/icon.ico">
 	<title>Landing in process</title>
+
+	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Rubik:wght@500&family=Sometype+Mono&display=swap" rel="stylesheet">
+	<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&family=Roboto+Condensed&family=Sometype+Mono&display=swap"
+			rel="stylesheet"
+	>
+
+	<!-- Main CSS -->
+	<link rel="stylesheet" type="text/css" href="design.css">
 </head>
 <body>
-	<div class='navbar'>
-		<label>
-			<input type="text" class='searchbar' placeholder="Looking for something?">
-		</label>
-		<ul>
-			<li>
-				<div class="wrapper">
-					<div class="link_wrapper">
-						<a href="projects.html">View my stuff!</a>
-						<div class="icon">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
-								<path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 			0-4.882 4.882-4.882 12.796 0 17.678l58.66 	58.66H12.5c-6.903 0-12.5 			5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 			58.662c-4.88 	4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 			3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 	4.883-12.796 			0-17.678z"/>
-							</svg>
-						</div>
-					</div>
-				</div>
-			</li>
-		</ul>
-	</div>
-	<br>
-	<br>
-	<br>
-	<h1 id=landing>Landing in process</h1>
-	<p class='desc'>Click one ↓</p>
-	<div class='img-select'>
-		<div class="wrap">
-			<input class='in' type="radio" id="rad1" name="rads" value="1" onclick="handleClick()">
-			<label for="rad1"></label>
-
-			<input class='in' type="radio" id="rad2" name="rads" value="2" onclick="handleClick()">
-			<label for="rad2"></label>
-
-			<input class='in' type="radio" id="rad3" name="rads" value="3" onclick="handleClick()">
-			<label for="rad3"></label>
+<!-- Nav Bar -->
+<div class="navbar">
+	<div class="wrapper">
+		<a href="projects.html">View my stuff!</a>
+		<div class="icon">
+			<!-- Arrow icon -->
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+				<path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882
+				4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5
+                5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66
+                58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66
+                8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882
+                4.883-12.796 0-17.678z"/>
+			</svg>
 		</div>
 	</div>
-	<div class='cont reveal'>
-		<p>Languages I'm experienced in:</p>
-		<div class='icey'>
-			<div class='iceTop'>
-				<img src="Images/iceberg/icebergTop.png" class='ice' alt='iceberg'>
-				<div class = 'pylogo'>
-					<img src="Images/python_logo.png" class='logo py' alt="">
-				</div>
-				<img src="Images/javaLogo.png" class='logo javalogo' alt=''>
+</div>
+
+<!-- Page Heading & Description -->
+<h1 id="landing">Landing in process</h1>
+<p class="desc">Click one ↓</p>
+
+<!-- Radio Buttons for Something (Background / Themes) -->
+<div class="img-select">
+	<div class="wrap">
+		<input class="in" type="radio" id="rad1" name="rads" value="1" onclick="handleClick()">
+		<label for="rad1"></label>
+
+		<input class="in" type="radio" id="rad2" name="rads" value="2" onclick="handleClick()">
+		<label for="rad2"></label>
+
+		<input class="in" type="radio" id="rad3" name="rads" value="3" onclick="handleClick()">
+		<label for="rad3"></label>
+	</div>
+</div>
+
+<!-- Main Container -->
+<div class="cont reveal">
+	<p>Languages I'm experienced in:</p>
+	<div class="iceberg">
+		<!-- Top of the iceberg + Python + Java -->
+		<div class="ice1">
+
+			<img src="Images/iceberg/icebergTop.png" class="ice" alt="iceberg">
+
+			<!-- Java logo -->
+			<div class="java-wrapper">
+				<img src="Images/javaLogo.png" class="logo javalogo" alt="java logo">
 			</div>
-			<img src='Images/iceberg/icebergMTop.png' class='ice' alt='iceberg'>
-			<img src="Images/iceberg/icebergMBot.png" class='ice' alt='iceberg'>
-			<img src='Images/iceberg/icebergBot.png' class='ice' alt='iceberg'>
+
+		</div>
+
+		<!-- Middle & bottom iceberg images -->
+
+		<div class="ice2">
+			<img src="Images/iceberg/icebergMTop.png" class="ice" alt="iceberg">
+		</div>
+		<div class="ice3">
+			<img src="Images/iceberg/icebergMBot.png" class="ice" alt="iceberg">
+		</div>
+		<div class="ice4">
+			<img src="Images/iceberg/icebergBot.png" class="ice" alt="iceberg">
 		</div>
 	</div>
-	<script type="text/javascript" src='script.js'></script>
+</div>
+
+<!-- External Script -->
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>

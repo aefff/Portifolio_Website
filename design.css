@@ -1,89 +1,51 @@
-/*MAIN*/
-
-html, body{
-  font-family: 'Lato', sans-serif;
+/* Global Resets / Fonts */
+html, body {
   margin: 0;
   padding: 0;
+  font-family: 'Lato', sans-serif; /* Add more or remove as needed */
   transition: all 1s;
 }
 
-.zone {
-  cursor: pointer;
-  color: #000000;
-  background-color: #FFF;
-  border-radius: 4px;
-  border: 1px solid #bbb;
-}
-
-h1 {
-  text-align: center;
-  direction: ltr;
-  text-transform: uppercase;
-  font-family: 'Rubik', sans-serif;
-}
-
-#landing {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.Obackground {
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-.leftside {
-  display: inline-block;
-  margin-right: auto;
-  margin-left: auto;
-  position: sticky;
-  left: 0;
-  top: 0;
-  animation: moveUpDown 2s ease-in-out infinite;
-}
-
-@keyframes moveUpDown {
-  0% {
-    top: 0;
-  }
-  50% {
-    top: -10px;
-  }
-  100% {
-    top: 0;
-  }
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
+/* NAVBAR + SEARCHBAR */
 
 .navbar {
   position: sticky;
   top: 10%;
-  font-family: 'Rubik';
+  font-family: 'Rubik', sans-serif;
+  margin-bottom: 20px;
 }
 
-/*Button anim*/
+.searchbar {
+  margin-left: 50px;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 3px;
+  transition: all 1s;
+}
 
-.wrapper{
+.searchbar:hover {
+  background-color: skyblue;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* "View my stuff!" Button and Icon Animation */
+.wrapper {
   position: absolute;
   top: 15%;
   left: 85vw;
   transform: translate(-50%, -50%);
-  align-content: flex-start;
-
 }
 
-.link_wrapper{
+.link_wrapper {
   position: relative;
 }
 
-a{
+a {
   display: block;
   width: 250px;
   height: 50px;
@@ -91,15 +53,22 @@ a{
   font-weight: bold;
   text-decoration: none;
   background: #333;
-  text-align: center;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-align: center;
   border: 3px solid #333;
-  transition: all .35s;
+  transition: all 0.35s;
 }
 
-.icon{
+a:hover {
+  width: 200px;
+  border-color: #2ecc71;
+  background: transparent;
+  color: #2ecc71;
+}
+
+.icon {
   width: 50px;
   height: 50px;
   border: 3px solid transparent;
@@ -108,61 +77,55 @@ a{
   right: 0;
   top: 0;
   z-index: -1;
-  transition: all .35s;
+  transition: all 0.35s;
 }
 
-.icon svg{
+.icon svg {
   width: 30px;
   position: absolute;
   top: calc(50% - 15px);
   left: calc(50% - 15px);
   transform: rotate(-45deg);
   fill: #2ecc71;
-  transition: all .35s;
+  transition: all 0.35s;
 }
 
-a:hover{
-  width: 200px;
-  border: 3px solid #2ecc71;
-  background: transparent;
-  color: #2ecc71;
-}
-
-a:hover + .icon{
+a:hover + .icon {
   border: 3px solid #2ecc71;
   right: -25%;
 }
 
-/*Search bar*/
+/* HEADINGS / TEXT */
 
-.searchbar {
-  margin-left: 50px;
-  margin-bottom: 20px;
-  top: 10%;
-  border: none;
-  font-size: 17px;
-  border-color: transparent bisque;
-  border-radius: 3px;
-  transition: all 1s;
-  font-size:1.5em;
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Rubik', sans-serif;
 }
 
-.searchbar:hover {
-  background-color: skyblue;
+.desc {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+  letter-spacing: 2px;
 }
+
+.desc:hover {
+  cursor: crosshair;
+}
+
+/* RADIO BUTTON WRAP */
 
 .img-select {
   position: sticky;
-  top: 5px; /* adjust as needed */
+  top: 5px; /* adjust if needed */
   height: 50px;
 }
 
-/*Background selection*/
 .wrap {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-right: -50%;
   transform: translate(-50%, -50%);
 }
 
@@ -182,145 +145,123 @@ label {
   width: 30px;
   background: #999999;
   border-radius: 50%;
-  z-index: 2;
-  transition: box-shadow .4s ease,
-  background .3s ease;
+  transition: box-shadow 0.4s ease, background 0.3s ease;
 }
 
-.img-select .in:checked + label:before {
-  box-shadow: inset 0px 3px 0 2px rgba(89,202,89,1);
+.in:checked + label:before {
+  box-shadow: inset 0px 3px 0 2px rgba(89, 202, 89, 1);
   background: #fff;
 }
 
-.desc{
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 1.5em;
-  text-align: center;
-  letter-spacing: 2px;
-}
-
-.desc:hover {
-  cursor: crosshair;
-}
-
-/*END of background*/
+/* MAIN CONTENT CONTAINER */
 
 .cont {
   max-width: 60em;
-  text-align: center;
-  padding: 0em 1em 2em;
   margin: auto;
+  text-align: center;
   font-family: 'Roboto Condensed', sans-serif;
-  letter-spacing: 0.01px;
   font-size: 1em;
-  border-style: solid;
-  border-radius: 3%;
   background-color: rgba(255, 255, 255, 0.5);
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 3%;
   overflow: auto;
 }
+
+/* Reveal Animation */
 .reveal {
   position: relative;
   transform: translateY(150px);
   opacity: 0;
   transition: 2s all ease;
 }
-
 .reveal.active {
   transform: translateY(0);
   opacity: 1;
 }
 
-.icey {
+/* ICEBERG + LOGOS */
+
+.iceberg {
   display: flex;
   flex-direction: column; /* Stack iceberg parts vertically */
-  align-items: center; /* Center align the parts */
-  width: 100%; /* Ensure it spans the container */
+  align-items: center;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
 }
 
 .ice {
+  width: 90%;
+  max-width: 25em;  /* Prevents huge scaling on large screens */
   transition: all 1s;
-  width: 90%; /* Make responsive to the container */
-  max-width: 25em; /* Prevent excessive scaling on larger screens */
-  height: auto; /* Maintain aspect ratio */
-  box-sizing: border-box
+  margin: 0 auto;
 }
 
 .ice:hover {
-  transform: scale(1.1); /* Adjusted hover scale */
-  margin: 1em 0; /* Maintain spacing during hover */
+  transform: scale(1.1);
+  margin: 1em 0;
 }
 
+/* The top iceberg section that holds images/logos horizontally */
+.ice1, .ice2, .ice3, .ice4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%; /* This can be 100% if you want it to match .iceberg's width */
+  gap: 5px;
+}
+
+/* The Python & Java logos */
 .logo {
-  width: 5%; /* Scales with the container */
+  position: absolute; /* Allows for fancy positioning over the iceberg */
+  width: 4%;          /* 5% of its parent (.pylogo) */
   height: auto;
-  position: absolute;
-  border: 2px solid red;
-  /*transform: translate(-50%, -50%);*/
-  transition: all 0.5s ease; /* Reduced hover transition time */
-}
-
-.pylogo {
-  width: 50%;
-  height: auto;
-  position: relative;
-  display: inline-block;
   transition: all 0.5s ease;
+  z-index: 999;
 }
 
-.javalogo {
-  top: 80%;
-  left: 60%;
-}
+/*JAVA LOGO*/
 
-.iceTop {
-  display: flex; /* Stack content horizontally */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  position: relative;
-  width: 100%; /* Match the parent container width */
-  gap: 5px; /* Reduce gap between logo and iceberg */
-}
-
-.iceTop:hover .pylogo {
-  transform: translateX(150px); /* Adjusted hover movement for balance */
-}
-
-.iceTop:hover .javalogo {
-  transform: translateX(-150px) translateY(-50px);
-}
-
-.iceTop:after {
-  content: ''; /* Ensure no content by default */
+.java-wrapper {
   position: absolute;
-  top: 60%;
-  left: 100%;
-  transform: translateY(-50%);
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  word-wrap: break-word;
   display: inline-block;
 }
 
-.pylogo::after {
-  content: 'Python was the first language I have ever learnt';
+/* Java logo positioning (over iceberg) */
+.javalogo {
+  width: 2em;
+  height: auto;
+}
+
+
+.ice1:hover .javalogo {
+  transform: translateX(-20em) translateY(-5em);
+}
+
+.java-wrapper::after {
   position: absolute;
-  top: 110%; /* Slightly below the element */
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0; /* Hidden by default */
+  content: 'Java was a language';
+  opacity: 0;
   white-space: nowrap;
   transition: opacity 0.5s ease, transform 0.5s ease;
-  background: #fff; /* For visibility */
+  background: #fff;
   color: #444;
   font-size: 0.9em;
   padding: 5px 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  z-index: 9999; /* Raise above the iceberg image */
+  z-index: 1000;
+  top: -8em;
+  left: -11em;
+  transform: translateX(-5em);
 }
 
-.iceTop:hover .pylogo::after,
-.pylogo:hover::after {
-  opacity: 1; /* Make it visible */
-  transform: translateX(-50%) translateY(0); /* Possibly shift a bit */
+.ice1:hover .java-wrapper::after,
+.java-wrapper:hover::after {
+  opacity: 1;
+  transform: translateX(-15em) translateY(5em);
 }
+
+/*PYTHON LOGO*/
