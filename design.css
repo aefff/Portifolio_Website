@@ -4,6 +4,7 @@ html, body {
   padding: 0;
   font-family: 'Lato', sans-serif; /* Add more or remove as needed */
   transition: all 1s;
+  min-height: 110%;
 }
 
 /* NAVBAR + SEARCHBAR */
