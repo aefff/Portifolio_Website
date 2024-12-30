@@ -218,7 +218,7 @@ label {
   position: absolute; /* Allows for fancy positioning over the iceberg */
   width: 4%;          /* 5% of its parent (.pylogo) */
   height: auto;
-  transition: all 0.5s ease;
+  transition: all 1s ease;
   z-index: 999;
 }
 
