@@ -113,7 +113,7 @@ function reveal() {
 	lastScroll = document.body.scrollTop || document.documentElement.scrollTop;
 }
 
-
+window.addEventListener('DOMContentLoaded', reveal);
 window.addEventListener('scroll', reveal);
 reveal();
 
