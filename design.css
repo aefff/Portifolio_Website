@@ -264,7 +264,7 @@ label {
 
 /* Override its tooltip text, position, etc. */
 .java-wrapper::after {
-  content: 'I learnt java for industry standard, I used it for application development, website backend, and have learnt springboot, hibernate amongst others for application development.';
+  content: 'I learnt java due it being industry standard. I use it for application development, website backend, and use springboot and hibernate amongst others for application development.';
 }
 
 /* The "slide away" transform for the .javalogo */
