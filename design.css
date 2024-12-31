@@ -248,6 +248,45 @@ label {
   transform: translateX(-5em); /* a base transform, can override later */
 }
 
+
+/* ||| ICE 1 |||*/
+
+.nosqlogo {
+  height: auto;
+}
+
+.nosqlogo {
+  left: 26em;
+  top: 3em;
+  width: 2em;
+  height: auto;
+}
+
+.nosql-wrapper {
+  /* If you need specific top/left or any extra styles */
+  top: 0;
+  left: 0;
+}
+
+/* Override its tooltip text, position, etc. */
+.nosql-wrapper::after {
+  content: 'I learnt java due it being industry standard. I use it for application development and website backend. Ive learnt to use frameworks such as springboot and hibernate amongst others for application development.';
+}
+
+/* The "slide away" transform for the .javalogo */
+.ice1:hover .nosql-wrapper::after {
+  opacity: 1;
+  transform: translateX(0em);
+  pointer-events: auto;
+}
+
+.ice1:hover .nosqlogo {
+  transform: translateX(-20em) translateY(-5em);
+  pointer-events: auto;
+}
+
+/* ||| ICE 2 |||*/
+
 /*JAVA LOGO*/
 
 .javalogo {
