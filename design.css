@@ -214,36 +214,26 @@ label {
   gap: 5px;
 }
 
-/* The Python & Java logos */
-.logo {
-  position: absolute; /* Allows for fancy positioning over the iceberg */
-  width: 4%;          /* 5% of its parent (.pylogo) */
+/*LOGO WRAPPERS*/
+
+/* A shared wrapper for both .java-wrapper and .py-wrapper */
+.icon-wrapper {
+  position: absolute;
+  display: inline-block;
+}
+
+/* A shared .logo-icon class for both .javalogo and .pylogo */
+.logo-icon {
+  position: absolute;
+  width: 2em;      /* common logo size */
   height: auto;
   transition: all 1s ease;
   z-index: 999;
 }
 
-/*JAVA LOGO*/
-
-.java-wrapper {
+/* A shared tooltip style for both wrappers */
+.icon-wrapper::after {
   position: absolute;
-  display: inline-block;
-}
-
-/* Java logo positioning (over iceberg) */
-.javalogo {
-  width: 2em;
-  height: auto;
-}
-
-
-.ice1:hover .javalogo {
-  transform: translateX(-20em) translateY(-5em);
-}
-
-.java-wrapper::after {
-  position: absolute;
-  content: 'I learnt java for industry standard, I used it for application development, website backend, and have learnt springboot, hibernate amongst others for application development.';
   opacity: 0;
   transition: opacity 0.5s ease, transform 0.5s ease;
   background: #fff;
@@ -253,26 +243,43 @@ label {
   border: 1px solid #ccc;
   border-radius: 4px;
   z-index: 1000;
-  top: -8em;
-  left: -14em;
   min-width: 15em;
-  transform: translateX(-5em);
+  transform: translateX(-5em); /* a base transform, can override later */
 }
 
-.ice1:hover .java-wrapper::after,
-.java-wrapper:hover::after {
+/*JAVA LOGO*/
+
+.javalogo {
+  left: 28em;
+  top: 5em;
+  width: 2em;
+  height: auto;
+}
+
+.java-wrapper {
+  /* If you need specific top/left or any extra styles */
+  top: 0;
+  left: 0;
+}
+
+/* Override its tooltip text, position, etc. */
+.java-wrapper::after {
+  content: 'I learnt java for industry standard, I used it for application development, website backend, and have learnt springboot, hibernate amongst others for application development.';
+}
+
+/* The "slide away" transform for the .javalogo */
+.ice1:hover .java-wrapper::after {
   opacity: 1;
-  transform: translateX(-15em) translateY(5em);
+  transform: translateY(3em);
+}
+
+.ice1:hover .javalogo {
+  transform: translateX(-22em) translateY(-5em);
 }
 
 /*PYTHON LOGO*/
 
-.py-wrapper {
-  position: absolute;
-  display: inline-block;
-}
-
-/* Java logo positioning (over iceberg) */
+/* Python logo positioning (over iceberg) */
 .pylogo {
   width: 2em;
   height: auto;
@@ -280,31 +287,16 @@ label {
   top: 1em;
 }
 
+.py-wrapper::after {
+  content: 'Python was the first programming language I learnt. I have used it in hosting the back end of websites, specifically using flask and django, aswell as have learnt tensorflow in order to create ML models, e.g. a clothes classifier.';
+}
+
+.ice1:hover .py-wrapper::after {
+  opacity: 1;
+  transform: translateX(13em) translateY(-1em);
+}
 
 .ice1:hover .pylogo {
-  transform: translateX(20em) translateY(-5em);
-}
-
-.py-wrapper::after {
-  position: absolute;
-  content: 'Python was the first programming language I learnt. I have used it in hosting the back end of websites, specifically using flask and django, aswell as have learnt tensorflow in order to create ML models, e.g. a clothes classifier.';
-  opacity: 0;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  background: #fff;
-  color: #444;
-  font-size: 0.9em;
-  padding: 5px 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  z-index: 1000;
-  top: -8em;
-  left: -11em;
-  transform: translateX(-5em);
-  min-width: 15em;
-}
-
-.ice1:hover .py-wrapper::after,
-.py-wrapper:hover::after {
   opacity: 1;
-  transform: translateX(24em) translateY(6em);
+  transform: translateX(20em) translateY(-5em);
 }
