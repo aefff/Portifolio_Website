@@ -235,6 +235,7 @@ label {
 .icon-wrapper::after {
   position: absolute;
   opacity: 0;
+  pointer-events: none;
   transition: opacity 0.5s ease, transform 0.5s ease;
   background: #fff;
   color: #444;
@@ -251,7 +252,6 @@ label {
 
 .javalogo {
   left: 28em;
-  top: 5em;
   width: 2em;
   height: auto;
 }
@@ -264,17 +264,19 @@ label {
 
 /* Override its tooltip text, position, etc. */
 .java-wrapper::after {
-  content: 'I learnt java due it being industry standard. I use it for application development, website backend, and use springboot and hibernate amongst others for application development.';
+  content: 'I learnt java due it being industry standard. I use it for application development and website backend. Ive learnt to use frameworks such as springboot and hibernate amongst others for application development.';
 }
 
 /* The "slide away" transform for the .javalogo */
-.ice1:hover .java-wrapper::after {
+.ice2:hover .java-wrapper::after {
   opacity: 1;
-  transform: translateY(3em);
+  transform: translateY(-3em);
+  pointer-events: auto;
 }
 
-.ice1:hover .javalogo {
+.ice2:hover .javalogo {
   transform: translateX(-22em) translateY(-5em);
+  pointer-events: auto;
 }
 
 /*PYTHON LOGO*/
@@ -284,19 +286,40 @@ label {
   width: 2em;
   height: auto;
   left: -2em;
-  top: 1em;
 }
 
 .py-wrapper::after {
   content: 'Python was the first programming language I learnt. I have used it in hosting the back end of websites, specifically using flask and django, aswell as have learnt tensorflow in order to create ML models, e.g. a clothes classifier.';
 }
 
-.ice1:hover .py-wrapper::after {
+.ice2:hover .py-wrapper::after {
   opacity: 1;
-  transform: translateX(13em) translateY(-1em);
+  transform: translateX(13em) translateY(-3em);
+  pointer-events: auto;
 }
 
-.ice1:hover .pylogo {
-  opacity: 1;
+.ice2:hover .pylogo {
   transform: translateX(20em) translateY(-5em);
+}
+
+/*JAVASCRIPT LOGO*/
+.jslogo {
+  width: 2em;
+  height: auto;
+  left: -3em;
+  top: -3em;
+}
+
+.js-wrapper::after {
+  content: 'I learnt javascript for web development, specifically using Angular, node.js and reactjs. I continued building on my skills by learning react native for building mobile applications.'
+}
+
+.ice2:hover .js-wrapper::after {
+  opacity: 1;
+  transform: translateX(-30em) translateY(8em);
+  pointer-events: auto;
+}
+
+.ice2:hover .jslogo{
+  transform: translateX(-18em) translateY(8em);
 }
