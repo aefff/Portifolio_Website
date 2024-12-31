@@ -287,9 +287,8 @@ label {
 
 .py-wrapper::after {
   position: absolute;
-  content: 'PYTHON!!!!!';
+  content: 'Python was the first programming language I learnt. I have used it in hosting the back end of websites, specifically using flask and django, aswell as have learnt tensorflow in order to create ML models, e.g. a clothes classifier.';
   opacity: 0;
-  white-space: nowrap;
   transition: opacity 0.5s ease, transform 0.5s ease;
   background: #fff;
   color: #444;
@@ -301,10 +300,11 @@ label {
   top: -8em;
   left: -11em;
   transform: translateX(-5em);
+  min-width: 15em;
 }
 
 .ice1:hover .py-wrapper::after,
 .py-wrapper:hover::after {
   opacity: 1;
-  transform: translateX(29em) translateY(6em);
+  transform: translateX(24em) translateY(6em);
 }
