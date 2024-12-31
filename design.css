@@ -252,12 +252,8 @@ label {
 /* ||| ICE 1 |||*/
 
 .nosqlogo {
-  height: auto;
-}
-
-.nosqlogo {
   left: 26em;
-  top: 3em;
+  top: 4em;
   width: 2em;
   height: auto;
 }
@@ -270,7 +266,7 @@ label {
 
 /* Override its tooltip text, position, etc. */
 .nosql-wrapper::after {
-  content: 'I learnt java due it being industry standard. I use it for application development and website backend. Ive learnt to use frameworks such as springboot and hibernate amongst others for application development.';
+  content: 'I learnt NoSQL to handle large, unstructured datasets, experimenting with tools like MongoDB and Redis to build scalable applications.'
 }
 
 /* The "slide away" transform for the .javalogo */
@@ -281,7 +277,39 @@ label {
 }
 
 .ice1:hover .nosqlogo {
-  transform: translateX(-20em) translateY(-5em);
+  transform: translateX(-20em) translateY(-7em);
+  pointer-events: auto;
+}
+
+/* SQL Logo */
+
+.sqlogo {
+  left: 26em;
+  top: 3em;
+  width: 1.5em;
+  height: auto;
+}
+
+.sql-wrapper {
+  /* If you need specific top/left or any extra styles */
+  top: -1em;
+  left: 1em;
+}
+
+/* Override its tooltip text, position, etc. */
+.sql-wrapper::after {
+  content: 'I learned SQL to efficiently interact with relational databases, mastering complex queries and schema design using systems like MySQL and PostgreSQL to handle structured data for various applications.';
+}
+
+/* The "slide away" transform for the .javalogo */
+.ice1:hover .sql-wrapper::after {
+  opacity: 1;
+  transform: translateX(44em) translateY(13em);
+  pointer-events: auto;
+}
+
+.ice1:hover .sqlogo {
+  transform: translateX(20em) translateY(5em);
   pointer-events: auto;
 }
 
