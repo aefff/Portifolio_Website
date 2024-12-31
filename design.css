@@ -243,9 +243,8 @@ label {
 
 .java-wrapper::after {
   position: absolute;
-  content: 'Java was a language';
+  content: 'I learnt java for industry standard, I used it for application development, website backend, and have learnt springboot, hibernate amongst others for application development.';
   opacity: 0;
-  white-space: nowrap;
   transition: opacity 0.5s ease, transform 0.5s ease;
   background: #fff;
   color: #444;
@@ -255,7 +254,8 @@ label {
   border-radius: 4px;
   z-index: 1000;
   top: -8em;
-  left: -11em;
+  left: -14em;
+  min-width: 15em;
   transform: translateX(-5em);
 }
 
