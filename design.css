@@ -411,3 +411,25 @@ label {
 .ice2:hover .swift-logo{
   transform: translateX(15em) translateY(2em);
 }
+
+/*C# logo*/
+
+.csharplogo {
+  width: 2em;
+  height: auto;
+  left: 3em;
+}
+
+.csharp-wrapper::after {
+  content: 'I learned C# to develop applications and cross-platform solutions, working with frameworks like .NET and Unity specifically for both modular application development and game development.'
+}
+
+.ice3:hover .csharp-wrapper::after {
+  opacity: 1;
+  transform: translateX(13em) translateY(5em);
+  pointer-events: auto;
+}
+
+.ice3:hover .csharplogo{
+  transform: translateX(15em) translateY(2em);
+}
