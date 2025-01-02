@@ -236,7 +236,7 @@ label {
   position: absolute;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 1s ease, transform 0.5s ease;
   background: #fff;
   color: #444;
   font-size: 0.9em;
@@ -412,7 +412,9 @@ label {
   transform: translateX(15em) translateY(2em);
 }
 
-/*C# logo*/
+/* ||| ICE 3 |||*/
+
+/*C# LOGO*/
 
 .csharplogo {
   width: 2em;
@@ -421,15 +423,83 @@ label {
 }
 
 .csharp-wrapper::after {
-  content: 'I learned C# to develop applications and cross-platform solutions, working with frameworks like .NET and Unity specifically for both modular application development and game development.'
+  content: 'I learnt C# to develop applications and cross-platform solutions, working with frameworks like .NET and Unity specifically for both modular application development and game development.'
 }
 
 .ice3:hover .csharp-wrapper::after {
   opacity: 1;
-  transform: translateX(13em) translateY(5em);
+  transform: translateX(13em) translateY(3em);
   pointer-events: auto;
 }
 
 .ice3:hover .csharplogo{
-  transform: translateX(15em) translateY(2em);
+  transform: translateX(15em) translateY(0em);
+}
+
+/*CPP LOGO*/
+
+.cpplogo {
+  width: 2em;
+  height: auto;
+  left: -5em;
+  top: -1em;
+}
+
+.cpp-wrapper::after {
+  content: 'I learnt C++ to build high-performance applications and systems, studying its low-level control for resource-intensive tasks like game development and embedded systems..'
+}
+
+.ice3:hover .cpp-wrapper::after {
+  opacity: 1;
+  transform: translateX(-29em) translateY(-15em);
+  pointer-events: auto;
+}
+
+.ice3:hover .cpplogo{
+  transform: translateX(-15em) translateY(-15em);
+}
+
+/*RUST LOGO*/
+
+.rustlogo {
+  width: 2em;
+  height: auto;
+  top: -3em;
+}
+
+.rust-wrapper::after {
+  content: 'I learnt Rust for its powerful combination of memory safety, high performance, and fearless concurrency, enabling me to write reliable, low-level code without sacrificing speed.'
+}
+
+.ice3:hover .rust-wrapper::after {
+  opacity: 1;
+  transform: translateX(15em) translateY(-15em);
+  pointer-events: auto;
+}
+
+.ice3:hover .rustlogo{
+  transform: translateX(20em) translateY(-13em);
+}
+
+/*C LOGO*/
+
+.clogo {
+  width: 2em;
+  height: auto;
+  left: -1em;
+  top: 1em;
+}
+
+.c-wrapper::after {
+  content: 'I learnt Rust for its powerful combination of memory safety, high performance, and fearless concurrency, enabling me to write reliable, low-level code without sacrificing speed.'
+}
+
+.ice3:hover .c-wrapper::after {
+  opacity: 1;
+  transform: translateX(-30em) translateY(3em);
+  pointer-events: auto;
+}
+
+.ice3:hover .clogo{
+  transform: translateX(-20em) translateY(-1em);
 }
