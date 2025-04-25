@@ -185,7 +185,7 @@ label {
 
 .iceberg {
   display: flex;
-  flex-direction: column; /* Stack iceberg parts vertically */
+  flex-direction: column;
   align-items: center;
   width: 90%;
   height: auto;
@@ -210,13 +210,12 @@ label {
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 100%; /* This can be 100% if you want it to match .iceberg's width */
+  width: 100%;
   gap: 5px;
 }
 
 /*LOGO WRAPPERS*/
 
-/* A shared wrapper for both .java-wrapper and .py-wrapper */
 .icon-wrapper {
   position: absolute;
   display: inline-block;
@@ -231,7 +230,6 @@ label {
   z-index: 999;
 }
 
-/* A shared tooltip style for both wrappers */
 .icon-wrapper::after {
   position: absolute;
   opacity: 0;
@@ -245,38 +243,35 @@ label {
   border-radius: 4px;
   z-index: 1000;
   min-width: 15em;
-  transform: translateX(-5em); /* a base transform, can override later */
+  transform: translateX(-5em);
 }
 
 
 /* ||| ICE 1 |||*/
 
-.nosqlogo {
+.react {
   left: 26em;
   top: 4em;
   width: 2em;
   height: auto;
 }
 
-.nosql-wrapper {
-  /* If you need specific top/left or any extra styles */
+.react-wrapper {
   top: 0;
   left: 0;
 }
 
-/* Override its tooltip text, position, etc. */
-.nosql-wrapper::after {
-  content: 'I learnt NoSQL to handle large, unstructured datasets, experimenting with tools like MongoDB and Redis to build scalable applications.'
+.react-wrapper::after {
+  content: 'I learnt react after creating the base of my portifolio website out of pure html, css and JS, after realizing its advantages I began another project to refine my knowledge; TaskManager.'
 }
 
-/* The "slide away" transform for the .javalogo */
-.ice1:hover .nosql-wrapper::after {
+.ice1:hover .react-wrapper::after {
   opacity: 1;
   transform: translateX(0em);
   pointer-events: auto;
 }
 
-.ice1:hover .nosqlogo {
+.ice1:hover .react {
   transform: translateX(-20em) translateY(-7em);
   pointer-events: auto;
 }
@@ -378,7 +373,7 @@ label {
 }
 
 .js-wrapper::after {
-  content: 'I learnt javascript for web development, specifically using Angular, node.js and reactjs. I continued building on my skills by learning react native for building mobile applications.'
+  content: 'I learnt javascript for web development. I continued building on my skills by learning react for building easier to understand applications.'
 }
 
 .ice2:hover .js-wrapper::after {
